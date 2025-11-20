@@ -1,28 +1,31 @@
+# Python
 def tueresboa():
-    lletraA = {'X' 'X' 'X' 'X' '.'
-               'X' '.' '.' '.' 'X'
-               'X' 'X' 'X' 'X' '.'
-               'X' '.' '.' '.' 'X'
-               'X' 'X' 'X' 'X' '.'
-               }
+    lletraB = [
+        "XXXX.\n",
+        "X...X\n",
+        "XXXX.\n",
+        "X...X\n",
+        "XXXX.\n",
+    ]
 
-    lletraB = {'.' 'X' 'X' 'X' '.' 
-               'X' '.' '.' '.' 'X'
-               'X' 'X' 'X' 'X' 'X'
-               'X' '.' '.' '.' 'X'
-               'X' '.' '.' '.' 'X'
-    }
+    lletraA = [
+        ".XXX.\n",
+        "X...X\n",
+        "XXXXX\n",
+        "X...X\n",
+        "X...X\n",
+    ]
 
-    buit = {'.' '.' '.' '.' '.'
-            '.' '.' '.' '.' '.'
-            '.' '.' '.' '.' '.'
-            '.' '.' '.' '.' '.'
-            '.' '.' '.' '.' '.'}
+    buit = [".....\n"] * 5
 
+    claseA = int(input())
+    claseB = int(input())
 
-    matriu = [5]
-    for i in range(len(matriu)):
-        for j in range(matriu[i]):
-            print("*" * matriu[i])
+    if claseA > claseB:
+        print(''.join(lletraA), end='')
+    elif claseB > claseA:
+        print(''.join(lletraB), end='')
+    else:
+        print(''.join(buit), end='')
 
 tueresboa()
